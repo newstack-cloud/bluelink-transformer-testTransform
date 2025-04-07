@@ -2,12 +2,22 @@
   "id": "two-hundred/testTransform",
   "displayName": "Celerity Transform",
   "version": "1.0.0",
-  "protocolVersion": 1,
+  "protocolVersions": ["1.0"],
   "transformName": "celerity-2025-04-01",
   "description": "Celerity application transformer for the Deploy Engine containing the abstract resources that power Celerity application primitives.",
   "author": "Two Hundred Cloud Services Ltd",
   "repository": "https://github.com/two-hundred/celerity-trasformer-testTransform",
-  "config": {},
+  "config": {
+    "apiKey": {
+        "type": "string",
+        "label": "API key",
+        "description": "The API key to talk to the underlying infrastructure.",
+        "required": true,
+        "examples": [
+            "sk_10ea49b2a109eaab43f4c3d2b0e1a5e"
+        ]
+    }
+  },
   "abstractResources": [
     {
       "type": "test/celerity/handler",
