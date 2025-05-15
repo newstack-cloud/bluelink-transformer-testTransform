@@ -8,15 +8,16 @@
   "author": "Two Hundred Cloud Services Ltd",
   "repository": "https://github.com/two-hundred/celerity-trasformer-testTransform",
   "config": {
-    "apiKey": {
+    "fields": {
+      "apiKey": {
         "type": "string",
         "label": "API key",
         "description": "The API key to talk to the underlying infrastructure.",
         "required": true,
-        "examples": [
-            "sk_10ea49b2a109eaab43f4c3d2b0e1a5e"
-        ]
-    }
+        "examples": ["sk_10ea49b2a109eaab43f4c3d2b0e1a5e"]
+      }
+    },
+    "allowAdditionalFields": false
   },
   "abstractResources": [
     {
@@ -147,7 +148,11 @@
         "```yaml\nresources:\n - type: test/celerity/handler\n   name: ProcessOrders\n   properties:\n     functionName: ProcessOrders\n     id: arn:aws:lambda:us-west-2:123456789012:function:ProcessOrders\n```",
         "Some example with `inline code`."
       ],
-      "canLinkTo": ["test/celerity/datastore", "test/celerity/bucket", "test/celerity/queue"]
+      "canLinkTo": [
+        "test/celerity/datastore",
+        "test/celerity/bucket",
+        "test/celerity/queue"
+      ]
     },
     {
       "type": "test/celerity/datastore",
