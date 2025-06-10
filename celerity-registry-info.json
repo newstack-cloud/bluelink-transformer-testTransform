@@ -1,6 +1,6 @@
 {
     "supportedProtocols": ["1.0"],
     "dependencies": {
-        "two-hundred/test": "^1.0.0"
+        "newstack-cloud/test": "^1.0.0"
     }
 }
